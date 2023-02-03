@@ -1,0 +1,16 @@
+{
+    "PopoverItems": [{
+            "Title": "Add Product",
+            "OnPress": "/MDKApp/Actions/Suppliers/NavToSuppliers_CreateProduct.action"
+        },
+        {
+            "Title": "Add PurchaseOrderHeader",
+            "OnPress": "/MDKApp/Actions/Suppliers/NavToSuppliers_CreatePurchaseOrderHeader.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/MDKApp/Rules/Suppliers/Suppliers_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

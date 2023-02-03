@@ -1,0 +1,84 @@
+{
+	"Caption": "ProductCategory Detail",
+	"DesignTimeTarget": {
+		"Service": "/MDKApp/Services/com_sap_edm_sampleservice_v2.service",
+		"EntitySet": "ProductCategories",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MDKApp/Actions/ProductCategories/NavToProductCategories_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/MDKApp/Rules/ProductCategories/ProductCategories_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{CategoryName}",
+						"Subhead": "{Category}",
+						"BodyText": "",
+						"Footnote": "{MainCategoryName}",
+						"Description": "{MainCategory}",
+						"StatusText": "{NumberOfProducts}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{UpdatedTimestamp}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Category",
+							"Value": "{Category}"
+						},
+						{
+							"KeyName": "CategoryName",
+							"Value": "{CategoryName}"
+						},
+						{
+							"KeyName": "MainCategory",
+							"Value": "{MainCategory}"
+						},
+						{
+							"KeyName": "MainCategoryName",
+							"Value": "{MainCategoryName}"
+						},
+						{
+							"KeyName": "NumberOfProducts",
+							"Value": "{NumberOfProducts}"
+						},
+						{
+							"KeyName": "UpdatedTimestamp",
+							"Value": "{UpdatedTimestamp}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ProductCategories_Detail",
+	"PrefersLargeCaption": true
+}

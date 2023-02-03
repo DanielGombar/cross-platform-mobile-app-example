@@ -1,0 +1,52 @@
+{
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/MDKApp/Actions/Service/SyncFailureMessage.action",
+	"OnSuccess": "/MDKApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js",
+	"Service": "/MDKApp/Services/com_sap_edm_sampleservice_v2.service",
+	"DefiningRequests": [
+		{
+			"Name": "Customers",
+			"Query": "Customers"
+		},
+		{
+			"Name": "ProductCategories",
+			"Query": "ProductCategories"
+		},
+		{
+			"Name": "Products",
+			"Query": "Products",
+			"AutomaticallyRetrievesStreams": true
+		},
+		{
+			"Name": "ProductTexts",
+			"Query": "ProductTexts"
+		},
+		{
+			"Name": "PurchaseOrderHeaders",
+			"Query": "PurchaseOrderHeaders"
+		},
+		{
+			"Name": "PurchaseOrderItems",
+			"Query": "PurchaseOrderItems"
+		},
+		{
+			"Name": "SalesOrderHeaders",
+			"Query": "SalesOrderHeaders"
+		},
+		{
+			"Name": "SalesOrderItems",
+			"Query": "SalesOrderItems"
+		},
+		{
+			"Name": "Stock",
+			"Query": "Stock"
+		},
+		{
+			"Name": "Suppliers",
+			"Query": "Suppliers"
+		}
+	]
+}

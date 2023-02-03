@@ -1,0 +1,79 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MDKApp/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/MDKApp/Actions/Stock/Stock_CreateEntity.action",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "Create Stock Detail",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Caption": "LotSize",
+							"KeyboardType": "Number",
+							"_Name": "LotSize",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "MinStock",
+							"KeyboardType": "Number",
+							"_Name": "MinStock",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ProductId",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{Name}",
+								"ReturnValue": "{ProductId}",
+								"Target": {
+									"EntitySet": "Products",
+									"Service": "/MDKApp/Services/com_sap_edm_sampleservice_v2.service"
+								}
+							},
+							"_Name": "ProductId",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "Quantity",
+							"KeyboardType": "Number",
+							"_Name": "Quantity",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "QuantityLessMin",
+							"Caption": "QuantityLessMin",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "UpdatedTimestamp",
+							"Caption": "UpdatedTimestamp",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						}
+					]
+				}
+			],
+			"_Name": "FormCellContainer",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Stock_Create"
+}

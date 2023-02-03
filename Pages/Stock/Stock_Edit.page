@@ -1,0 +1,90 @@
+{
+	"Caption": "Update Stock Detail",
+	"DesignTimeTarget": {
+		"Service": "/MDKApp/Services/com_sap_edm_sampleservice_v2.service",
+		"EntitySet": "Stock",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/MDKApp/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MDKApp/Actions/Stock/Stock_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Caption": "",
+					"Controls": [
+						{
+							"Caption": "LotSize",
+							"_Name": "LotSize",
+							"Value": "{LotSize}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "MinStock",
+							"_Name": "MinStock",
+							"Value": "{MinStock}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ProductId",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{Name}",
+								"ReturnValue": "{ProductId}",
+								"Target": {
+									"EntitySet": "Products",
+									"Service": "/MDKApp/Services/com_sap_edm_sampleservice_v2.service"
+								}
+							},
+							"Value": "{ProductId}",
+							"_Name": "ProductId",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "Quantity",
+							"_Name": "Quantity",
+							"Value": "{Quantity}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "QuantityLessMin",
+							"Caption": "QuantityLessMin",
+							"Value": "{QuantityLessMin}",
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "UpdatedTimestamp",
+							"Value": "{UpdatedTimestamp}",
+							"Caption": "UpdatedTimestamp",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						}
+					]
+				}
+			],
+			"_Name": "PageOneFormCell",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Stock_Edit"
+}
