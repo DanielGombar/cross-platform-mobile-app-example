@@ -1,9 +1,0 @@
-{
-    "PopoverItems": [
-        {
-            "Title": "Delete",
-            "OnPress": "/MDKApp/Rules/Customers/Customers_DeleteConfirmation.js"
-        }
-    ],
-    "_Type": "Action.Type.PopoverMenu"
-}
