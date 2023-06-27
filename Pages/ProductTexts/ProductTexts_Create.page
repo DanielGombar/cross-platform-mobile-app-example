@@ -16,6 +16,7 @@
 	"Caption": "Create ProductText Detail",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
 			"Sections": [
 				{
 					"Controls": [
@@ -50,13 +51,15 @@
 							"_Name": "ShortDescription",
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						}
-					]
+					],
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				}
 			],
-			"_Name": "FormCellContainer",
-			"_Type": "Control.Type.FormCellContainer"
+			"_Name": "SectionedTable0"
 		}
 	],
 	"_Type": "Page",
-	"_Name": "ProductTexts_Create"
+	"_Name": "ProductTexts_Create",
+	"PrefersLargeCaption": true
 }

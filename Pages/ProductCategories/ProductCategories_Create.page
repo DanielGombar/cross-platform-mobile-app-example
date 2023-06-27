@@ -16,6 +16,7 @@
 	"Caption": "Create ProductCategory Detail",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
 			"Sections": [
 				{
 					"Controls": [
@@ -51,13 +52,15 @@
 							"Caption": "UpdatedTimestamp",
 							"_Type": "Control.Type.FormCell.DatePicker"
 						}
-					]
+					],
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				}
 			],
-			"_Name": "FormCellContainer",
-			"_Type": "Control.Type.FormCellContainer"
+			"_Name": "SectionedTable0"
 		}
 	],
 	"_Type": "Page",
-	"_Name": "ProductCategories_Create"
+	"_Name": "ProductCategories_Create",
+	"PrefersLargeCaption": true
 }
