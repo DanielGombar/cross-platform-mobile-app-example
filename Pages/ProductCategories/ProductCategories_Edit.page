@@ -21,9 +21,9 @@
 	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
 			"Sections": [
 				{
-					"Caption": "",
 					"Controls": [
 						{
 							"Caption": "Category",
@@ -64,13 +64,15 @@
 							"Caption": "UpdatedTimestamp",
 							"_Type": "Control.Type.FormCell.DatePicker"
 						}
-					]
+					],
+					"_Type": "Section.Type.FormCell",
+					"_Name": "PageOneFormCellSectionFormCell0"
 				}
 			],
-			"_Name": "PageOneFormCell",
-			"_Type": "Control.Type.FormCellContainer"
+			"_Name": "PageOneFormCell"
 		}
 	],
 	"_Type": "Page",
-	"_Name": "ProductCategories_Edit"
+	"_Name": "ProductCategories_Edit",
+	"PrefersLargeCaption": true
 }
